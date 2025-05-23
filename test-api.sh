@@ -14,7 +14,7 @@ if [ -f .env ]; then
 fi
 
 # Set default port
-PORT=${PORT:-3000}
+PORT=${PORT:-4002}
 API_URL="http://localhost:${PORT}"
 
 # Check if server is running

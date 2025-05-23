@@ -20,7 +20,7 @@ if exist .env (
 )
 
 :: Set default port
-if "%PORT%"=="" set PORT=3000
+if "%PORT%"=="" set PORT=4002
 set API_URL=http://localhost:%PORT%
 
 :: Check if server is running

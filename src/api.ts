@@ -40,11 +40,10 @@ app.get('/', function(req, res) {
 
 // Apply route
 app.get('/apply', function(req, res) {
-  const queryParams = req.query;
-  const email = queryParams.email as string | undefined;
+  const queryParams = req.query;  const email = queryParams.email as string | undefined;
   const password = queryParams.password as string | undefined;
   const jobUrl = queryParams.jobUrl as string | undefined;
-  const headless = queryParams.headless !== 'false'; // Default to true
+  const headless = queryParams.headless === 'true'; // Default to false
   const debug = queryParams.debug === 'true'; // Default to false
 
   // Validate required parameters
@@ -102,7 +101,7 @@ export { app };
 
 // Start the server if run directly
 if (require.main === module) {
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT || 4002;
   app.listen(PORT, () => {
     console.log('\n\x1b[32m%s\x1b[0m', '='.repeat(50));
     console.log('\x1b[32m%s\x1b[0m', `Naukri Job Application API Server running on port ${PORT}`);

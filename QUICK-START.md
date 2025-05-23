@@ -59,11 +59,11 @@ This guide will help you get started with the Naukri Job Application Automator q
    npm start
    ```
 
-   Access the API at http://localhost:3000
+   Access the API at http://localhost:4002
    
    Example API usage:
    ```
-   http://localhost:3000/apply?email=your_email&password=your_password&jobUrl=https://www.naukri.com/job-listings-your-job-url
+   http://localhost:4002/apply?email=your_email&password=your_password&jobUrl=https://www.naukri.com/job-listings-your-job-url
    ```
    
    See [API.md](./API.md) for complete documentation.
