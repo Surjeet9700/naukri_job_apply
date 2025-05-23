@@ -101,8 +101,8 @@ export { app };
 
 // Start the server if run directly
 if (require.main === module) {
-  const PORT = process.env.PORT || 4002;
-  app.listen(PORT, () => {
+  const PORT = Number(process.env.PORT);
+  app.listen(PORT, '0.0.0.0', () => {
     console.log('\n\x1b[32m%s\x1b[0m', '='.repeat(50));
     console.log('\x1b[32m%s\x1b[0m', `Naukri Job Application API Server running on port ${PORT}`);
     console.log('\x1b[32m%s\x1b[0m', '='.repeat(50));
